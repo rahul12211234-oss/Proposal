@@ -24,6 +24,9 @@ body{
     background-position:center;
     overflow:hidden;
 }
+    <audio id="loveMusic" loop>
+    <source src="love music.mp3" type="audio/mpeg">
+</audio>
 .images{
     display:flex;
     justify-content:center;
@@ -90,21 +93,18 @@ button{
 button:hover{
     transform:scale(1.1);
 }
-<audio id="loveMusic" loop>
-    <source src="love music.mp3" type="audio/mpeg">
-</audio>
+<style>
 .heart{
     position:fixed;
-    bottom:-50px;
-    font-size:25px;
-    pointer-events:none;
+    bottom:-100px;
     z-index:9999;
-    animation:heartFloat 6s linear forwards;
+    pointer-events:none;
+    animation:bigHeartFloat linear forwards;
 }
 
-@keyframes heartFloat{
+@keyframes bigHeartFloat{
     0%{
-        transform:translateY(0) scale(0.5);
+        transform:translateY(0) scale(0.3);
         opacity:0;
     }
 
@@ -112,10 +112,17 @@ button:hover{
         opacity:1;
     }
 
+    50%{
+        transform:translateY(-50vh) translateX(30px) scale(1);
+    }
+
     100%{
-        transform:translateY(-120vh) scale(1.5);
+        transform:translateY(-120vh) translateX(-30px) scale(1.5);
         opacity:0;
     }
+}
+</style>
+
 }
 }
 </style>
@@ -156,34 +163,34 @@ function showLove() {
        document.getElementById("love music.mp3").play();
     alert("❤️ Mohini ❤️\nI Love You More Than Words Can Say.\nWill You Be Mine Forever? 🌹");
 }
+function createHeart(){
 
-function createHeart() {
     const heart = document.createElement("div");
 
-    heart.className = ("heart");
+    heart.className = "heart";
     heart.innerHTML = "❤️";
 
-    // Random position across the full screen
-    heart.style.relative =
-        Math.random() * (window.innerWidth - 30) + "px";
+    // Random position
+    heart.style.left =
+        Math.random() * (window.innerWidth - 100) + "px";
 
-    // Random size
+    // BIG heart sizes
     heart.style.fontSize =
-        (15 + Math.random() * 20) + "px";
+        (50 + Math.random() * 70) + "px";
 
-    // Random speed
+    // Different speeds
     heart.style.animationDuration =
-        (4 + Math.random() * 3) + "s";
+        (5 + Math.random() * 3) + "s";
 
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 7000);
+    }, 8000);
 }
 
 // Create hearts continuously
-setInterval(createHeart, 250);
+setInterval(createHeart, 300);
 </script>
 
 </body>
