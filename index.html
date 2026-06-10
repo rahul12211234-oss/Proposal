@@ -90,7 +90,9 @@ button{
 button:hover{
     transform:scale(1.1);
 }
-
+<audio id="loveMusic" loop>
+    <source src="love music.mp3" type="audio/mpeg">
+</audio>
 .heart{
     position:absolute;
     color:white;
@@ -143,6 +145,7 @@ button:hover{
 
 <script>
 function showLove() {
+       document.getElementById("love music.mp3").play();
     alert("❤️ Mohini ❤️\nI Love You More Than Words Can Say.\nWill You Be Mine Forever? 🌹");
 }
 
