@@ -142,18 +142,18 @@ button:hover{
 </div>
 
 <script>
-document.getElementById("loveBtn").addEventListener("click", function() {
+function showLove() {
     alert("❤️ Mohini ❤️\nI Love You More Than Words Can Say.\nWill You Be Mine Forever? 🌹");
-});
+}
 
 function createHeart() {
-    const heart = document.createElement("div");
+    let heart = document.createElement("div");
     heart.className = "heart";
     heart.innerHTML = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
     document.body.appendChild(heart);
 
-    setTimeout(() => {
+    setTimeout(function() {
         heart.remove();
     }, 5000);
 }
