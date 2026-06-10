@@ -94,21 +94,28 @@ button:hover{
     <source src="love music.mp3" type="audio/mpeg">
 </audio>
 .heart{
-    position:absolute;
-    color:white;
+    position:fixed;
     font-size:25px;
-    animation:float 5s linear infinite;
+    pointer-events:none;
+    animation:float 5s linear forwards;
+    z-index:1;
 }
 
 @keyframes float{
-    from{
-        transform:translateY(100vh);
+    0%{
+        transform:translateY(0);
         opacity:0;
     }
-    to{
-        transform:translateY(-100px);
+
+    20%{
         opacity:1;
     }
+
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
 }
 </style>
 </head>
@@ -122,7 +129,7 @@ button:hover{
     <img src="heart.jpg" alt="Love Heart">
 </div>
     <div class="message">
-        <span class="name">Mohini,</span><br><br>
+        <span class="name">Reema,</span><br><br>
 
         Every time I see you my Jaan, my heart beats a little faster.
         Your smile brightens my darkest days, and your presence makes every moment special.
@@ -135,7 +142,7 @@ button:hover{
 
         <br><br>
 
-        🌹 <b>Mohini, will you be the most beautiful part of my life and stay with me forever?</b> 🌹
+        🌹 <b>Reema, will you be the most beautiful part of my life and stay with me forever?</b> 🌹
     </div>
 
     <button onclick="showLove()">
