@@ -95,24 +95,27 @@ button:hover{
 </audio>
 .heart{
     position:fixed;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
     font-size:25px;
     pointer-events:none;
-    animation:float 5s linear forwards;
-    z-index:1;
+    z-index:9999;
+    animation:heartFloat 5s linear forwards;
 }
 
-@keyframes float{
+@keyframes heartFloat{
     0%{
-        transform:translateY(0);
+        transform:translateY(0) scale(0.5);
         opacity:0;
     }
 
-    20%{
+    10%{
         opacity:1;
     }
 
     100%{
-        transform:translateY(-110vh);
+        transform:translateY(-120vh) scale(1.5);
         opacity:0;
     }
 }
