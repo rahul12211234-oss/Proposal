@@ -12,16 +12,34 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-
 body{
-    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url("romantic-bg.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.images{
     display:flex;
     justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff0844,#ffb199);
-    overflow:hidden;
+    gap:15px;
+    margin:20px 0;
+    flex-wrap:wrap;
 }
 
+.images img{
+    width:180px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid rgba(255,255,255,0.5);
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.images img:hover{
+    transform:scale(1.05);
+}
 .card{
     width:90%;
     max-width:700px;
