@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mohini ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff0844,#ffb199);
+    overflow:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:25px;
+    color:white;
+    box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:0 0 20px white;
+}
+
+.message{
+    font-size:1.3rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.name{
+    color:#fff700;
+    font-weight:bold;
+    font-size:1.6rem;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff0844;
+    font-size:1.2rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:25px;
+    animation:float 5s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:1;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>❤️ Dear Mohini ❤️</h1>
+<div class="images">
+    <img src="couple1.jpg" alt="Romantic Couple">
+    <img src="rose.jpg" alt="Rose">
+    <img src="heart.jpg" alt="Love Heart">
+</div>
+    <div class="message">
+        <span class="name">Mohini,</span><br><br>
+
+        Every time I see you, my heart beats a little faster.
+        Your smile brightens my darkest days, and your presence makes every moment special.
+
+        <br><br>
+
+        You are not just someone I admire,
+        you are the person who has captured my heart completely.
+
+        <br><br>
+
+        🌹 <b>Mohini, will you be the most beautiful part of my life and stay with me forever?</b> 🌹
+    </div>
+
+    <button onclick="showLove()">
+        💍 Accept My Love
+    </button>
+</div>
+
+<script>
+function showLove(){
+    alert("❤️ Mohini ❤️\nI Love You More Than Words Can Say.\nWill You Be Mine Forever? 🌹");
+}
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },5000);
+}
+
+setInterval(createHeart,250);
+</script>
+
+</body>
+</html>
