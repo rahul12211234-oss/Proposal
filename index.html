@@ -142,23 +142,23 @@ button:hover{
 </div>
 
 <script>
-function showLove(){
+document.getElementById("loveBtn").addEventListener("click", function() {
     alert("❤️ Mohini ❤️\nI Love You More Than Words Can Say.\nWill You Be Mine Forever? 🌹");
-}
+});
 
-function createHeart(){
-    const heart=document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML="❤️";
-    heart.style.left=Math.random()*100+"vw";
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
     document.body.appendChild(heart);
 
-    setTimeout(()=>{
+    setTimeout(() => {
         heart.remove();
-    },5000);
+    }, 5000);
 }
 
-setInterval(createHeart,250);
+setInterval(createHeart, 250);
 </script>
 
 </body>
